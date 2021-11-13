@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation Page</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+</body>
+
+<nav id="navbar">
+  <header>Python Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#What_you_should_already_know"
+        >What you should already know</a
+      >
+    </li>
+    <li>
+      <a class="nav-link" href="#JavaScript_and_Java">Whetting Your Appetite</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Using the Python Interpreter</a></li>
+    <li><a class="nav-link" href="#Variables">Control Flow Tools</a></li>
+    <li>
+      <a class="nav-link" href="#Declaring_variables">Data Structures</a>
+    </li>
+    <li><a class="nav-link" href="#Variable_scope">Modules</a></li>
+    <li><a class="nav-link" href="#Global_variables">Input and Output</a></li>
+    <li><a class="nav-link" href="#Constants">Errors and Exceptions</a></li>
+    <li><a class="nav-link" href="#Data_types">Classes</a></li>
+    <li><a class="nav-link" href="#while_statement">Inheritance</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
+      </p>
+
+      <p>
+        The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.
+      </p>
+      <ul>
+        <li>
+          The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.
+        </li>
+        <li>
+          This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>This guide assumes you have the following basic background:</p>
+
+      <ul>
+        <li>
+          A general understanding of the Internet and the World Wide Web (WWW).
+        </li>
+        <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+        <li>
+          Some programming experience. If you are new to programming, try one of
+          the tutorials linked on the main page about Python.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="JavaScript_and_Java">
+    <header>Whetting Your Appetite</header>
+    <article>
+      <p>
+        Python is simple to use, but it is a real programming language, offering much more structure and support for large programs than shell scripts or batch files can offer. On the other hand, Python also offers much more error checking than C, and, being a very-high-level language, it has high-level data types built in, such as flexible arrays and dictionaries. Because of its more general data types Python is applicable to a much larger problem domain than Awk or even Perl, yet many things are at least as easy in Python as in those languages.
+      </p>
+
+      <p>
+        Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples to start learning to program in Python. Some of these modules provide things like file I/O, system calls, sockets, and even interfaces to graphical user interface toolkits like Tk.
+      </p>
+      <p>
+        Python is an interpreted language, which can save you considerable time during program development because no compilation and linking is necessary. The interpreter can be used interactively, which makes it easy to experiment with features of the language, to write throw-away programs, or to test functions during bottom-up program development. It is also a handy desk calculator.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Hello_world">
+    <header>Using the Python Interpreter</header>
+    </article>
+    <p>
+      The Python interpreter is usually installed as /usr/local/bin/python3.10 on those machines where it is available; putting /usr/local/bin in your Unix shell’s search path makes it possible to start it by typing the command:
+    </p>
+  <code
+        >python3.10
+      </code>
+  <p>
+    to the shell. 1 Since the choice of the directory where the interpreter lives is an installation option, other places are possible; check with your local Python guru or system administrator. (E.g., /usr/local/python is a popular alternative location.)
+  </p>
+  
+  </section>
+  <section class="main-section" id="Variables">
+    <header>Control Flow Controls</header>
+    <article>
+     Perhaps the most well-known statement type is the if statement. For example:
+      <code
+        >x = int(input("Please enter an integer: "))
+        if x < 0:
+           x = 0
+           print('Negative changed to zero')elif x == 0:
+           print('Zero')
+           elif x == 1:
+           print('Single')
+           else:
+           print('More')
+      </code>
+
+      There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.
+    </article>
+    <p>
+      If you’re comparing the same value to several constants, or checking for specific types or attributes, you may also find the match statement useful.
+    </p>
+  </section>
+  <section class="main-section" id="Declaring_variables">
+    <header>Data Structures</header>
+    <article>
+      The list data type has some more methods. Here are all of the methods of list objects:
+      <p>
+        list.append(x); Add an item to the end of the list. Equivalent to <code>a[len(a):] = [x].</code>
+      </p>
+      <p>
+        list.extend(iterable); Extend the list by appending all the items from the iterable. Equivalent to <code>a[len(a):] = iterable.</code>
+      </p>
+      <p>
+        list.insert(i, x) Insert an item at a given position. The first argument is the index of the element before which to insert, so <code> a.insert(0, x)</code> inserts at the front of the list.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Variable_scope">
+    <header>Modules</header>
+    <article>
+      <p>
+      <p>
+        A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with the following contents:
+
+      <code
+        >def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+def fib2(n):   # return Fibonacci series up to n
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a+b
+    return result</code
+      >
+      <p>
+        Now enter the Python interpreter and import this module with the following command:
+      </p>
+      <code
+            >>>> import fibo</code>
+      <p>
+        If you intend to use a function often you can assign it to a local name:
+      </p>
+      <code
+            >>>> fib = fibo.fib
+>>> fib(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377</code>
+      
+    </article>
+  </section>
+  <section class="main-section" id="Global_variables">
+    <header>Input and Output</header>
+    <article>
+      <p>
+        So far we’ve encountered two ways of writing values: expression statements and the print() function. (A third way is using the write() method of file objects; the standard output file can be referenced as sys.stdout. See the Library Reference for more information on this.)
+      </p>
+
+      <p>
+        Often you’ll want more control over the formatting of your output than simply printing space-separated values. There are several ways to format output.
+      </p>
+      <p>
+       To use formatted string literals, begin a string with f or F before the opening quotation mark or triple quotation mark. Inside this string, you can write a Python expression between { and } characters that can refer to variables or literal values.
+      </p>
+      <code
+            >>>> year = 2016
+>>> event = 'Referendum'
+>>> f'Results of the {year} {event}'
+'Results of the 2016 Referendum'</code>
+      <p>
+        <p>
+       The str.format() method of strings requires more manual effort. You’ll still use { and } to mark where a variable will be substituted and can provide detailed formatting directives, but you’ll also need to provide the information to be formatted.
+      </p>
+      <code
+            >>>> yes_votes = 42_572_654
+>>> no_votes = 43_132_495
+>>> percentage = yes_votes / (yes_votes + no_votes)
+>>> '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
+' 42572654 YES votes  49.67%'</code>
+      <p>
+       Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create any layout you can imagine. The string type has some methods that perform useful operations for padding strings to a given column width.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="Constants">
+    <header>Errors and Exceptions</header>
+    <article>
+      <p>
+        Syntax errors, also known as parsing errors, are perhaps the most common kind of complaint you get while you are still learning Python:
+      </p>
+
+      <code>>>> while True print('Hello world')
+  File "<stdin>", line 1
+    while True print('Hello world')
+                   ^
+SyntaxError: invalid syntax</code>
+      <p>
+        The parser repeats the offending line and displays a little ‘arrow’ pointing at the earliest point in the line where the error was detected. The error is caused by (or at least detected at) the token preceding the arrow: in the example, the error is detected at the function print(), since a colon (':') is missing before it. File name and line number are printed so you know where to look in case the input came from a script.
+      </p>
+
+      <p>
+        Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error messages as shown here:
+      </p>
+      <code
+        >>>> 10 * (1/0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>> 4 + spam*3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'spam' is not defined
+>>> '2' + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str</code
+      >
+      The last line of the error message indicates what happened. Exceptions come in different types, and the type is printed as part of the message: the types in the example are ZeroDivisionError, NameError and TypeError. The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception names are built-in identifiers (not reserved keywords).
+    </article>
+  </section>
+  <section class="main-section" id="Data_types">
+    <header>Classes</header>
+    <article>
+      <p>Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state.</p>
+      
+      <p>Compared with other programming languages, Python’s class mechanism adds classes with a minimum of new syntax and semantics. It is a mixture of the class mechanisms found in C++ and Modula-3. Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data. As is true for modules, classes partake of the dynamic nature of Python: they are created at runtime, and can be modified further after creation.</p>
+      
+      <p>In C++ terminology, normally class members (including the data members) are public (except see below Private Variables), and all member functions are virtual. As in Modula-3, there are no shorthands for referencing the object’s members from its methods: the method function is declared with an explicit first argument representing the object, which is provided implicitly by the call. As in Smalltalk, classes themselves are objects. This provides semantics for importing and renaming. Unlike C++ and Modula-3, built-in types can be used as base classes for extension by the user. Also, like in C++, most built-in operators with special syntax (arithmetic operators, subscripting etc.) can be redefined for class instances.</p>
+      
+      <p>(Lacking universally accepted terminology to talk about classes, I will make occasional use of Smalltalk and C++ terms. I would use Modula-3 terms, since its object-oriented semantics are closer to those of Python than C++, but I expect that few readers have heard of it.)</p>
+      
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>Inheritance</header>
+    <article>
+      Of course, a language feature would not be worthy of the name “class” without supporting inheritance. The syntax for a derived class definition looks like this:
+
+      <code>class DerivedClassName(BaseClassName):
+    statement-1
+    .
+    .
+    .
+    statement-N
+</code> The name BaseClassName must be defined in a scope containing the derived class definition. In place of a base class name, other arbitrary expressions are also allowed. This can be useful, for example, when the base class is defined in another module:
+      <code>class DerivedClassName(modname.BaseClassName):
+</code>
+
+      <p>
+        Execution of a derived class definition proceeds the same as for a base class. When the class object is constructed, the base class is remembered. This is used for resolving attribute references: if a requested attribute is not found in the class, the search proceeds to look in the base class. This rule is applied recursively if the base class itself is derived from some other class.
+      </p>
+
+      <p>
+        There’s nothing special about instantiation of derived classes: DerivedClassName() creates a new instance of the class. Method references are resolved as follows: the corresponding class attribute is searched, descending down the chain of base classes if necessary, and the method reference is valid if this yields a function object.
+      </p>
+
+     Derived classes may override methods of their base classes. Because methods have no special privileges when calling other methods of the same object, a method of a base class that calls another method defined in the same base class may end up calling a method of a derived class that overrides it. (For C++ programmers: all methods in Python are effectively virtual.)
+
+      <p>An overriding method in a derived class may in fact want to extend rather than simply replace the base class method of the same name. There is a simple way to call the base class method directly: just call BaseClassName.methodname(self, arguments). This is occasionally useful to clients as well. (Note that this only works if the base class is accessible as BaseClassName in the global scope.)</p>
+
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a
+            href="https://docs.python.org/3/tutorial/"
+            target="_blank"
+            >Python</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+</html>
